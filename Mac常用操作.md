@@ -1,0 +1,58 @@
+# 一、Homebrew 一键安装
+
+```shell
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+```
+
+# 二、苹果 Mac 全屏时邮件 App 会自动跳出分割屏幕的解决方法
+
+> -   打开 Google 帐户。（打开 qq 邮箱，点击设置按钮）
+> -   在安全性中打开【两步验证】。（在邮箱设置界面点击账户标签）
+> -   点选下方的【应用程式密码】。（选择开启 POP3/SMTP 和 IMAP/SMTP 服务）
+> -   应用程式选【邮件】，装置选【Mac】。（在弹出的验证密保对话框中按相应的提示操作后，点击“我已发送”按钮）
+> -   接着将系统产生的应用程式密码复制起来。
+> -   打开「系统偏好设置」>「互联网帐号」，将原本的 Gmail(QQ) 停用或删除。
+> -   接着再加入一次 Google(QQ) 帐号，但这次选择最下方的【加入其他帐号…】。
+> -   输入 Google(QQ) 帐号，密码则使用「步骤 5」复制下来的密码。
+> -   设置完成。
+
+# 三、MacOS 删除系统自带软件-MacOS10.15 Catalina 删除系统系统软件
+
+> -   解除保护---重启电脑，在重启的过程中按住 command+R 组合键进入到恢复工具界面，然后点击“实用工具”选项卡中的“终端”一栏!
+> -   进入终端以后，在终端中输入命令：`csrutil disable`
+> -   输入`reboot`
+> -   终端执行：`sudo -i`，输入设备密码
+> -   输入`sudo mount -uw /`
+> -   删除命令`sudo rm -rf `
+
+删除实例：删除苹果 TV （可以进入访达-应用程序 拖入终端）  
+`sudo rm -rf /System/Applications/TV.app`  
+最后的最后，如果你想在打开保护装置，记得 csrutil enable 就好了 （.................）
+
+# 四、Geoip2-CN 更新链接
+
+https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb
+
+# 五、Mac 命令行
+
+## 1. 配置文件 （.zshrc）
+
+如果文件不存在可以手动创建
+
+```shell
+touch ~/.zshrc
+```
+
+使修改后的配置文件生效，随后重启终端
+
+```shell
+source ~/.zshrc
+```
+
+## 2. 定义命令别名
+
+将常用的参数都记录成在一条 alias 里
+
+```shell
+alias bll='bilili -d ~/Movies/bilili/ -c `cat ~/.sessdata` --disable-proxy --danmaku=ass --playlist-type=m3u -y --use-mirrors'
+```
